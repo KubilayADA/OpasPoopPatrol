@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <m💩eta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <title>Opa's Poop Patrol</title>
 </head>
@@ -12,19 +12,19 @@
     <img src="/images/arrows.png" alt="arrowsPng" class="arrows-image">
     <button class="start-button">START GAME</button>
     <p>Use the left and right arrow to control the character!</p> 
-    <p1> STATS<br>Lives: 3 💩💩💩<br>Score: 0 🎲</p1>
-    </div>
-    <div id="game-screen" style="display: none;">
-      <div class="garden-image-container">
-        <img src="/images/player.png" alt="playerPng" class="player-image">
+    <p class="stats">STATS<br>Lives: 3 💩💩💩<br>Score: 0 🎲</p>
+  </div>
+  <div id="game-screen" class="game-screen">
+    <div class="garden-image-container">
+      <img src="/images/player.png" alt="playerPng" class="player-image">
       <img src="/images/garden.png" alt="gardenPng" class="garden-image">
-        <p2>Score: 0 🎲</p2>
-        <p3> Lives: 3 💩💩💩</p3>
-    </div>  
+      <p class="score">Score: 0 🎲</p>
+      <p class="lives">Lives: 3 💩💩💩</p>
+    </div>
     <div id="dog"></div>
     <div id="poo"></div>
     <div id="player"></div>
+  </div>
   <script src="./game.js"></script>
 </body>
 </html>
-

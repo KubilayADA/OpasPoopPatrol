@@ -3,7 +3,7 @@ const gameScreen = document.getElementById('game-screen');
 const headerImage = document.querySelector('.header-image');
 const arrowImage = document.querySelector('.arrows-image');
 const paragraph = document.querySelector('p'); 
-const paragraph1 = document.querySelector('p1');
+const paragraph1 = document.querySelector('.paragraph1'); 
 const gardenImage = document.querySelector('.garden-image');
 const startPage = document.querySelector('.start-page');
 const playerImage = document.querySelector('.player-image');
@@ -14,13 +14,11 @@ let playerPosition = {
 };
 
 startButton.addEventListener('click', () => {
-    
     startButton.style.display = 'none';
     headerImage.style.display = 'none';
     arrowImage.style.display = 'none';
     paragraph.style.display = 'none';
-    paragraph1.style.display = 'none';
-    if (paragraph1) {
+    if (paragraph1) { 
         paragraph1.style.display = 'none';
     }
     
@@ -32,21 +30,21 @@ startButton.addEventListener('click', () => {
 });
 
 function startGame() {
-    
     document.addEventListener('keydown', handleKeyDown);
-  
 }
+
 function handleKeyDown(event) {
     const speed = 10;
     switch (event.key) {
         case 'ArrowLeft':
-            movePlayer(-speed,0);
+            movePlayer(-speed, 0);
             break;
-            case 'ArrowRight':
-                movePlayer(+speed, 0);
-                break;
+        case 'ArrowRight':
+            movePlayer(speed, 0);
+            break;
     }
 }
+
 function movePlayer(exxenX, exxenY) {
     playerPosition.x += exxenX;
     playerPosition.y += exxenY;
@@ -57,20 +55,18 @@ function movePlayer(exxenX, exxenY) {
     const maxX = gameScreenLimit.width - playerLimit.width;
     const maxY = gameScreenLimit.height - playerLimit.height;
 
-    if(playerPosition.x < 0) {
-        playerPosition = 0;
+    if (playerPosition.x < 0) {
+        playerPosition.x = 0; 
     } else if (playerPosition.x > maxX) {
-        playerPosition.x = maxX;
+        playerPosition.x = maxX; 
     }
 
     if (playerPosition.y < 0) {
-        playerPosition.y = 0;
+        playerPosition.y = 0; 
     } else if (playerPosition.y > maxY) {
-        playerPosition.y = maxY;
+        playerPosition.y = maxY; 
     }
 
     playerImage.style.left = playerPosition.x + 'px';
-    playerImage.style.top = playerPosition.y + 'px';
+    playerImage.style.bottom = playerPosition.y + 'px';
 }
-
-
