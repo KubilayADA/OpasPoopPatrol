@@ -25,5 +25,8 @@ startButton.addEventListener('click', () => {
 function startGame() {
     
 
-    console.log('game started');
+    console.log('game started');   
+}
+function initializeGame() {
+    
 }
