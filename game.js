@@ -91,4 +91,4 @@ function moveDog() {
     const newLeft = currentLeft + direction * speed;
     dogImage.style.left = newLeft + 'px';
   }
-  setInterval(moveDog, 20);
+  setInterval(moveDog, 10);
