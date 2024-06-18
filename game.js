@@ -82,15 +82,13 @@ function moveDog() {
     const dogWidth = dogImage.offsetWidth;
   
     if (currentLeft + dogWidth >= containerWidth) {
-      direction = -1; // Change direction to left
+      direction = -1; 
     } else if (currentLeft <= 0) {
-      direction = 1; // Change direction to right
+      direction = 1; 
     }
   
-    // Calculate new position
+   
     const newLeft = currentLeft + direction * speed;
     dogImage.style.left = newLeft + 'px';
   }
-  
-  // Call moveDog every 20 milliseconds (adjust as needed)
   setInterval(moveDog, 20);
