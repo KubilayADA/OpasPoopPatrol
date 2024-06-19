@@ -41,11 +41,7 @@ class Player {
             this.playerPosition.x = maxX;
         }
 
-        if (this.playerPosition.y < 0) {
-            this.playerPosition.y = 0;
-        } else if (this.playerPosition.y > maxY) {
-            this.playerPosition.y = maxY;
-        }
+   
 
 
         this.updatePlayerPosition();
