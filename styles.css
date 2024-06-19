@@ -9,7 +9,6 @@ body {
     background-color: white;
     position: relative;
   }
-  
   .header-image {
     display: block;
     width: 30%;
@@ -32,7 +31,6 @@ body {
     left: 50%;
     transform: translate(-50%);
   }
-  
   .arrows-image {
     width: 150px;
     height: 100px;
@@ -42,11 +40,9 @@ body {
     transform: translate(-50%);
 
   }
-  
   .start-page {
     position: fixed;
   }
-  
   #game-screen {
     display: none;
     position: relative;
@@ -55,11 +51,7 @@ body {
     overflow: hidden;
     background-image: url('images/garden.png');
     background-size: cover;
-  
-    
-    
   }
-  
   
 /*   .garden-image {
     width: 100%;
@@ -71,7 +63,6 @@ body {
     display: none;
   } */
   
-  
   .player-image {
     display: none;
     position: fixed;
@@ -80,7 +71,6 @@ body {
     z-index: 1;
     left: 50%;
     bottom: 0;
-   
   }
   .guide {
     color: red;
@@ -91,7 +81,6 @@ body {
     font-size: smaller;
     white-space: nowrap; 
   }
-
 #stats {
   display: flex;
   justify-content: space-between;
@@ -106,29 +95,42 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+  
     z-index: 2; 
     height: 420px;
     width: 320px;
 }
 
-#poo {
-  width: 50px;
-  height: 13px;
+.poo-image {
+  width: 150px;
+  height:220px;
   position: absolute;
-  animation: moveElement 2s infinite;
+  animation: moveElement 4s infinite;
 }
 
 @keyframes moveElement {
   0% {
       
       top: 0;
+      opacity: 1;
+      transform: translate(0, 0);
   }
  
    100% {
       
       top: 100%;
+      opacity: 1;
+      transform: translate(0, 0);
   }
+  
+}
+#poo .poo-image {
+  position: absolute;
+  
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+ 
 }
  
 

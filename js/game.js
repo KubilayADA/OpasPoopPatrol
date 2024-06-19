@@ -37,9 +37,13 @@ class Game {
        /*  this.livesBar.style.display = 'block';
         this.scoreBar.style.display = 'block'; */
        
-        this.player = new Player(this.gameScreen, this.playerImage);
-        this.dog = new Dog(dogImage, gameScreen);
-        this.dog.start();
+        if (this.dogImage) {
+            this.player = new Player(this.gameScreen, this.playerImage);
+            this.dog = new Dog(this.dogImage, this.gameScreen);
+            this.dog.start();
+        } else {
+            console.error('Dog image not found.');
+        }
     }
 }
 
