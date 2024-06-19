@@ -53,11 +53,13 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-   
     background-image: url('images/garden.png');
+    background-size: cover;
+  
+    
+    
   }
   
-
   
 /*   .garden-image {
     width: 100%;
@@ -69,6 +71,7 @@ body {
     display: none;
   } */
   
+  
   .player-image {
     display: none;
     position: fixed;
@@ -76,9 +79,8 @@ body {
     height: 50%;
     z-index: 1;
     left: 50%;
-    bottom: 0px;
+    bottom: 0;
    
-
   }
   .guide {
     color: red;
@@ -89,16 +91,6 @@ body {
     font-size: smaller;
     white-space: nowrap; 
   }
-
-.stats {
-  color: rgb(7, 118, 244);
-  position: absolute;
-  top: 0px; 
-  left: 50%;
-  transform: translate(-50%);
-  font-size: medium;
-  white-space: nowrap;
-}
 
 #stats {
   display: flex;
@@ -120,9 +112,23 @@ body {
     width: 320px;
 }
 
-.poo-image {
-  display: none;
-  width: 120px;
-  height: 100px;
-  bottom: 0;
+#poo {
+  width: 50px;
+  height: 13px;
+  position: absolute;
+  animation: moveElement 2s infinite;
 }
+
+@keyframes moveElement {
+  0% {
+      
+      top: 0;
+  }
+ 
+   100% {
+      
+      top: 100%;
+  }
+}
+ 
+

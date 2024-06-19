@@ -3,12 +3,14 @@ class Player {
         this.gameScreen = gameScreen;
         console.log(this.gameScreen.clientHeight)
         this.playerImage = playerImage;
+        
         this.playerPosition = {
             x: this.gameScreen.offsetWidth / 2 - this.playerImage.clientWidth / 2,
-            y: this.gameScreen.offsetHeight - this.playerImage.clientHeight - 50 
+            y: this.gameScreen.offsetHeight - this.playerImage.clientHeight  / 1.5,
         };
 
-        this.moveSpeed = 20; 
+        this.moveSpeed = 30; 
+       
         this.movePlayer = this.movePlayer.bind(this);
         this.setupControls(); 
         this.updatePlayerPosition(); 

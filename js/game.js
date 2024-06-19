@@ -17,14 +17,15 @@ class Game {
         this.height = 600;
 
         this.currentFrame = 0;
-     
         this.gameOver = false;
+        this.obstacles = [];
 
         this.startButton.addEventListener('click', () => {
             this.startGame();
         });
         this.player
         this.dog
+        this.poo
     }
 
     startGame() {
@@ -33,7 +34,6 @@ class Game {
         this.gameScreen.style.display = 'block';
         this.dogImage.style.display = 'block';
         this.playerImage.style.display = 'block';
-        this.gardenImage.style.display = 'block';
        /*  this.livesBar.style.display = 'block';
         this.scoreBar.style.display = 'block'; */
        
