@@ -4,11 +4,11 @@ class Dog {
         this.gameScreen = gameScreen;
         this.direction = 1;
         this.speed = speed;
-        this.moveDog = this.moveDog.bind(this);
+    
     }
 
     moveDog() {
-        const currentLeft = parseInt(window.getComputedStyle(this.dogImage).left);
+        const currentLeft = 0 //parseInt(window.getComputedStyle(this.dogImage).left);
         const containerWidth = this.gameScreen.offsetWidth;
         const dogWidth = this.dogImage.offsetWidth;
 
@@ -35,6 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const dogImage = document.querySelector('.dog-image');
     const gameScreen = document.querySelector('#game-screen'); 
 
-    const dog = new Dog(dogImage, gameScreen);
-    dog.start();
+    //const dog = new Dog(dogImage, gameScreen);
+    //dog.start();
 });

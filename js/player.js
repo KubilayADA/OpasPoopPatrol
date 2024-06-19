@@ -1,6 +1,7 @@
 class Player {
     constructor(gameScreen, playerImage) {
         this.gameScreen = gameScreen;
+        console.log(this.gameScreen.clientHeight)
         this.playerImage = playerImage;
         this.playerPosition = {
             x: this.gameScreen.offsetWidth / 2 - this.playerImage.clientWidth / 2,
@@ -59,5 +60,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameScreen = document.getElementById('game-screen'); 
     const playerImage = document.querySelector('.player-image'); 
 
-    const player = new Player(gameScreen, playerImage);
+    //const player = new Player(gameScreen, playerImage);
 });

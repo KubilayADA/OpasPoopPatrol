@@ -10,7 +10,7 @@ class Game {
         this.livesBar = document.querySelector('.lives');
         this.scoreBar = document.querySelector('.score');
         this.paragraph = document.querySelector('.guide');
-        
+        this.pooImage = document.querySelector('.poo-image');
         this.playerImage = document.querySelector('.player-image');
         this.gardenImage = document.querySelector('.garden-image');
         this.width = 500;
@@ -23,7 +23,8 @@ class Game {
         this.startButton.addEventListener('click', () => {
             this.startGame();
         });
-        this.player = new Player(this.gameScreen, this.playerImage);
+        this.player
+        this.dog
     }
 
     startGame() {
@@ -33,11 +34,12 @@ class Game {
         this.dogImage.style.display = 'block';
         this.playerImage.style.display = 'block';
         this.gardenImage.style.display = 'block';
-        this.livesBar.style.display = 'block';
-        this.scoreBar.style.display = 'block';
-        this.pooImage.style.display ='block'; 
-        
+       /*  this.livesBar.style.display = 'block';
+        this.scoreBar.style.display = 'block'; */
        
+        this.player = new Player(this.gameScreen, this.playerImage);
+        this.dog = new Dog(dogImage, gameScreen);
+        this.dog.start();
     }
 }
 

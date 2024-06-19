@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Opa's Poop Patrol</title>
-</head>
-<body>
-  <div class="start-page">
-    <img src="images/logo.png" alt="Game Title" class="header-image">
-    <img src="images/arrows.png" alt="arrowsPng" class="arrows-image">
-    <button id="start-button">START GAME</button>
-    <p class="guide">Use the left and right arrow to control the character!</p> 
-    <h1 class="stats">STATS:<br>Lives: 3 💩💩💩<br>Score: 0 🎲</h1>
-  </div>
-  <div id="game-screen" >
-      <img src="images/garden.png" alt="gardenPng" class="garden-image">
-      <p class="score">Score: 0 🎲</p>
-      <p class="lives">Lives: 3 💩💩💩</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Opa's Poop Patrol</title>
+  </head>
+  <body>
+    <div class="start-page">
+      <img src="images/logo.png" alt="Game Title" class="header-image" />
+      <img src="images/arrows.png" alt="arrowsPng" class="arrows-image" />
+      <button id="start-button">START GAME</button>
+      <p class="guide">
+        Use the left and right arrow to control the character!
+      </p>
+      <!-- <h1 class="stats">STATS:<br />Lives: 3 💩💩💩<br />Score: 0 🎲</h1> -->
     </div>
-    <div id="dog">
-      <img src="images/dog.png" alt="dogPng" class="dog-image">
+    <div id="game-screen">
+      <div id="stats">
+        <p>Lives: <span class="lives">3 💩💩💩</span></p>
+        <p >Score: <span class="score">0</span> 🎲</p>
+      </div>
+      <div id="dog">
+        <img src="images/dog.png" alt="dogPng" class="dog-image" />
+      </div>
+      <div id="poo">
+        <img src="images/poo.png" alt="pooPng" class="poo-image" />
+      </div>
+      <div id="player">
+        <img src="images/player.png" alt="playerPng" class="player-image" />
+      </div>
     </div>
-    <div id="poo">
-      <img src="images/poo.png" alt="pooPng" class="poo-image">
-    </div>
-    <div id="player">
-      <img src="images/player.png" alt="playerPng" class="player-image">
-    </div>
-  </div>
-  <div id="game-end" > 
-  </div>
-  <script src="./js/game.js"></script>
-  
-  <script src="./js/player.js"></script>
-  <script src="./js/dog.js"></script>
-</body>
+    <div id="game-end"></div>
+    <script src="./js/game.js"></script>
+
+    <script src="./js/player.js"></script>
+    <script src="./js/dog.js"></script>
+  </body>
 </html>
