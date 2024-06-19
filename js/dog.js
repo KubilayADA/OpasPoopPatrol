@@ -8,7 +8,7 @@ class Dog {
     }
 
     moveDog() {
-        const currentLeft = 0 //parseInt(window.getComputedStyle(this.dogImage).left);
+        const currentLeft = 0 
         const containerWidth = this.gameScreen.offsetWidth;
         const dogWidth = this.dogImage.offsetWidth;
 
