@@ -20,7 +20,7 @@ body {
     transform: translate(-50%);
   }
   
-  .start-button {
+  #start-button {
     display: block;
     width: 260px;
     height: 100px;
