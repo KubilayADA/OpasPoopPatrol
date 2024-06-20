@@ -16,6 +16,12 @@ class Game {
         this.lives = 3;
         this.gameOver = false;
 
+        this.gameMusic = new Audio('gamesound.mp3');
+        this.gameMusic.loop = true;
+        document.body.appendChild(this.gameMusic);
+
+   
+
         this.startButton.addEventListener('click', () => {
             this.startGame();
         });
@@ -36,6 +42,12 @@ class Game {
         this.gameLoop = setInterval(() => {
             this.updateGame();
         }, 1000 / 60);
+        this.playMusic();
+    }
+    playMusic() {
+        this.gameMusic.play().catch(error => {
+            console.error('Audio playback failed:', error);
+        });
     }
 
     updateGame() {
@@ -132,6 +144,8 @@ class Game {
         this.dogImage.style.display = 'none';
         this.playerImage.style.display = 'none';
         this.dedeImage.style.display = 'none';
+        this.gameMusic.currentTime = 0; 
+        this.playMusic(); 
         
     }
 }
