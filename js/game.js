@@ -11,7 +11,7 @@ class Game {
         this.scoreBar = document.querySelector('.score');
         this.paragraph = document.querySelector('.guide');
         this.playerImage = document.querySelector('.player-image');
-
+        this.dedeImage = document.querySelector('.dede-image');
         this.score = 0;
         this.lives = 3;
         this.gameOver = false;
@@ -59,6 +59,7 @@ class Game {
     updateScore() {
         this.score++;
         this.updateStats();
+        this.winGame();
     }
 
     loseLife() {
@@ -86,15 +87,38 @@ class Game {
             playerRect.bottom >pooRect.top
         return didCollide
     }
+    winGame() {
+        console.log('Current score:', this.score); // Check current score
+        if (this.score >= 25) {
+            clearInterval(this.gameLoop);
+            console.log('Game loop stopped.'); // Check if game loop is stopped
+            this.dog.stop();
+            alert('You win the game!');
+            this.resetGame();
+        }
+    }
+    
 
     endGame() {
         clearInterval(this.gameLoop);
         this.dog.stop();
-        // Show the grandpa
-        alert(`DAS IST KEIN FAHRRAD WEG!
-Do you want to restart the game ?`);
-        this.resetGame();
+        
+        this.dedeImage.style.display = 'block';
+       
+
+        this.dogImage.style.display = 'none';
+        this.playerImage.style.display = 'none';
+    
+        setTimeout(() => {
+       
+            const restart = confirm(`Do you want to restart the game?`);
+            if (restart) {
+                this.resetGame();
+            } 
+        }, 200); 
     }
+    
+    
 
     resetGame() {
         this.score = 0;
@@ -108,6 +132,8 @@ Do you want to restart the game ?`);
         this.gameScreen.style.display = 'none';
         this.dogImage.style.display = 'none';
         this.playerImage.style.display = 'none';
+        this.dedeImage.style.didCollide = 'none';
+        
     }
 }
 
