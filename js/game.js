@@ -102,10 +102,9 @@ class Game {
     endGame() {
         clearInterval(this.gameLoop);
         this.dog.stop();
-        
+        if (this.lives <= 0) {
         this.dedeImage.style.display = 'block';
-       
-
+        } 
         this.dogImage.style.display = 'none';
         this.playerImage.style.display = 'none';
     
@@ -132,7 +131,7 @@ class Game {
         this.gameScreen.style.display = 'none';
         this.dogImage.style.display = 'none';
         this.playerImage.style.display = 'none';
-        this.dedeImage.style.didCollide = 'none';
+        this.dedeImage.style.display = 'none';
         
     }
 }
