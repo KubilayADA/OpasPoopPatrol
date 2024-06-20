@@ -7,11 +7,10 @@
 - [Usage](#usage)
 - [Controls](#controls)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
-"Opa's Poop Patrol" is a fun and interactive browser game where the player must avoid obstacles and collect points. Help the character navigate through the garden by avoiding falling poops!
+"Opa's Poop Patrol" is a fun and interactive browser game where the player must collect poops. Help the character navigate through the garden by avoiding falling poops!
 
 ## Features
 - Interactive gameplay with keyboard controls.
@@ -60,8 +59,6 @@ We welcome contributions to improve the game! To contribute:
 5. Push to the branch (`git push origin feature-name`).
 6. Create a new Pull Request.
 
-## License
--
 
 ## Acknowledgements
 - Special thanks to IRONHACK and my mentor Mat! 
