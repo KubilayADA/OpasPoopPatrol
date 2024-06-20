@@ -9,7 +9,7 @@ class Player {
             y: this.gameScreen.offsetHeight - this.playerImage.clientHeight  / 1.5,
         };
 
-        this.moveSpeed = 30; 
+        this.moveSpeed = 50; 
        
         this.movePlayer = this.movePlayer.bind(this);
         this.setupControls(); 
@@ -40,9 +40,6 @@ class Player {
         } else if (this.playerPosition.x > maxX) {
             this.playerPosition.x = maxX;
         }
-
-   
-
 
         this.updatePlayerPosition();
     }
